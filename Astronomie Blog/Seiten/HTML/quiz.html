@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>astronomyKnoledge</title>
+    <link rel="stylesheet" href="../CSS/quiz.css">
+    
+</head>
+<body class="darkmode">
+    <button id="theme-switch">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
+    </button>
+    
+    <header class="header">
+        <a href="#" class="logo">Astronomy</a>
+    
+        <input type="checkbox" id="check">
+        <label for="check" class="icons">
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <i class='bx bx-x' id="close-icon"></i>
+        </label>
+    
+        <nav class="navbar">
+            <a href="index.html" style="--i:0;">Home</a>
+            <a href="themen.html" style="--i:1;">Topics</a>
+            <a href="kontakt.html" style="--i:2;">Contact</a>
+            <a href="quiz.html" style="--i:2;">Quiz</a>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="quiz-container">
+            <h1>🪐 Space Quiz</h1>
+            
+            <div class="progress">Question 1 of 9</div>
+            
+            <div class="question-container active" data-question="1">
+                <h3>1. What is the largest planet in our Solar System?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="a"> Earth</label>
+                    <label><input type="radio" name="q1" value="b"> Mars</label>
+                    <label><input type="radio" name="q1" value="c"> Jupiter</label>
+                    <label><input type="radio" name="q1" value="d"> Venus</label>
+                </div>
+                <div class="feedback"></div>
+            </div>
+            
+            <div class="question-container" data-question="2">
+                <h3>2. What are galaxies mainly made of?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q2" value="a"> Clouds and wind</label>
+                    <label><input type="radio" name="q2" value="b"> Stars, gas, and dust</label>
+                    <label><input type="radio" name="q2" value="c"> Water</label>
+                    <label><input type="radio" name="q2" value="d"> Rocks</label>
+                </div>
+                <div class="feedback"></div>
+            </div>
+            
+            <div class="question-container" data-question="3">
+                <h3>3. What are exoplanets?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q3" value="a"> Moons of Jupiter</label>
+                    <label><input type="radio" name="q3" value="b"> Planets outside our Solar System</label>
+                    <label><input type="radio" name="q3" value="c"> Stars</label>
+                    <label><input type="radio" name="q3" value="d"> Comets</label>
+                </div>
+                <div class="feedback"></div>
+            </div>
+            
+            <div class="question-container" data-question="4">
+                <h3>4. What cannot escape a black hole?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q4" value="a"> Light</label>
+                    <label><input type="radio" name="q4" value="b"> Water</label>
+                    <label><input type="radio" name="q4" value="c"> Sound</label>
+                    <label><input type="radio" name="q4" value="d"> Dust</label>
+                </div>
+                <div class="feedback"></div>
+            </div>
+            
+            <div class="question-container" data-question="5">
+                <h3>5. What process powers stars like our Sun?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q5" value="a"> Combustion</label>
+                    <label><input type="radio" name="q5" value="b"> Nuclear fusion</label>
+                    <label><input type="radio" name="q5" value="c"> Evaporation</label>
+                    <label><input type="radio" name="q5" value="d"> Magnetism</label>
+                </div>
+                <div class="feedback"></div>
+            </div>
+            
+            <div class="question-container" data-question="6">
+                <h3>6. What is a supernova?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q6" value="a"> A new planet</label>
+                    <label><input type="radio" name="q6" value="b"> A small black hole</label>
+                    <label><input type="radio" name="q6" value="c"> An exploding star</label>
+                    <label><input type="radio" name="q6" value="d"> A cloud of dust</label>
+                </div>
+                <div class="feedback"></div>
+            </div>
+            
+            <div class="question-container" data-question="7">
+                <h3>7. What is dark matter?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q7" value="a"> A type of star</label>
+                    <label><input type="radio" name="q7" value="b"> Matter we cannot see but affects gravity</label>
+                    <label><input type="radio" name="q7" value="c"> Smoke in space</label>
+                    <label><input type="radio" name="q7" value="d"> Another name for asteroids</label>
+                </div>
+                <div class="feedback"></div>
+            </div>
+            
+            <div class="question-container" data-question="8">
+                <h3>8. Who was the first person on the Moon?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q8" value="a"> Yuri Gagarin</label>
+                    <label><input type="radio" name="q8" value="b"> Neil Armstrong</label>
+                    <label><input type="radio" name="q8" value="c"> Buzz Aldrin</label>
+                    <label><input type="radio" name="q8" value="d"> Alan Shepard</label>
+                </div>
+                <div class="feedback"></div>
+            </div>
+            
+            <div class="question-container" data-question="9">
+                <h3>9. What is still one of the biggest mysteries in space?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q9" value="a"> How fast light travels</label>
+                    <label><input type="radio" name="q9" value="b"> Whether aliens exist</label>
+                    <label><input type="radio" name="q9" value="c"> Moon's shape</label>
+                    <label><input type="radio" name="q9" value="d"> Why Earth is round</label>
+                </div>
+                <div class="feedback"></div>
+            </div>
+            
+            <div class="quiz-controls">
+                <button id="prev-btn" disabled>Previous</button>
+                <button id="next-btn">Next</button>
+            </div>
+            
+            <div class="results">
+                <h2>Quiz Results</h2>
+                <p>You scored <span id="score">0</span> out of <span id="total">9</span>!</p>
+                <button class="restart-btn">Restart Quiz</button>
+            </div>
+        </div>
+    </main>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+       
+        const correctAnswers = {
+            q1: 'c', 
+            q2: 'b', 
+            q3: 'b',
+            q4: 'a', 
+            q5: 'b', 
+            q6: 'c', 
+            q7: 'b', 
+            q8: 'b', 
+            q9: 'b'  
+        };
+        
+        const questionContainers = document.querySelectorAll('.question-container');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const progressText = document.querySelector('.progress');
+        const resultsDiv = document.querySelector('.results');
+        const scoreSpan = document.getElementById('score');
+        const totalSpan = document.getElementById('total');
+        const restartBtn = document.querySelector('.restart-btn');
+        
+        let currentQuestion = 0;
+        let userAnswers = {};
+        let score = 0;
+        
+        // Initialize quiz
+        totalSpan.textContent = questionContainers.length;
+        showQuestion(currentQuestion);
+        
+        // Next button click handler
+        nextBtn.addEventListener('click', function() {
+            const questionName = `q${currentQuestion + 1}`;
+            const selectedOption = document.querySelector(`input[name="${questionName}"]:checked`);
+            
+            if (!selectedOption) {
+                alert('Please select an answer before proceeding.');
+                return;
+            }
+            
+            // Store user's answer
+            userAnswers[questionName] = selectedOption.value;
+            
+            // Check if answer is correct
+            const isCorrect = selectedOption.value === correctAnswers[questionName];
+            const feedbackDiv = questionContainers[currentQuestion].querySelector('.feedback');
+            
+            if (isCorrect) {
+                feedbackDiv.textContent = 'Correct!';
+                feedbackDiv.className = 'feedback correct';
+                score++;
+            } else {
+                feedbackDiv.textContent = 'Incorrect! The correct answer is: ' + getCorrectAnswerText(currentQuestion);
+                feedbackDiv.className = 'feedback incorrect';
+            }
+            
+            // Move to next question or show results
+            if (currentQuestion < questionContainers.length - 1) {
+                currentQuestion++;
+                showQuestion(currentQuestion);
+            } else {
+                showResults();
+            }
+        });
+        
+        // Previous button click handler
+        prevBtn.addEventListener('click', function() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                showQuestion(currentQuestion);
+            }
+        });
+        
+        // Restart button click handler
+        restartBtn.addEventListener('click', function() {
+            currentQuestion = 0;
+            userAnswers = {};
+            score = 0;
+            
+            // Reset all selections
+            document.querySelectorAll('input[type="radio"]').forEach(radio => {
+                radio.checked = false;
+            });
+            
+            // Hide results and feedback
+            resultsDiv.style.display = 'none';
+            document.querySelectorAll('.feedback').forEach(feedback => {
+                feedback.textContent = '';
+                feedback.className = 'feedback';
+            });
+            
+            // Show first question
+            showQuestion(currentQuestion);
+        });
+        
+        // Function to show a specific question
+        function showQuestion(index) {
+            // Hide all questions
+            questionContainers.forEach(container => {
+                container.classList.remove('active');
+            });
+            
+            // Show current question
+            questionContainers[index].classList.add('active');
+            
+            // Update progress text
+            progressText.textContent = `Question ${index + 1} of ${questionContainers.length}`;
+            
+            // Update button states
+            prevBtn.disabled = index === 0;
+            
+            if (index === questionContainers.length - 1) {
+                nextBtn.textContent = 'Finish';
+            } else {
+                nextBtn.textContent = 'Next';
+            }
+        }
+        
+        // Function to show quiz results
+        function showResults() {
+            // Hide all questions and controls
+            questionContainers.forEach(container => {
+                container.style.display = 'none';
+            });
+            document.querySelector('.quiz-controls').style.display = 'none';
+            progressText.style.display = 'none';
+            
+            // Show results
+            scoreSpan.textContent = score;
+            resultsDiv.style.display = 'block';
+        }
+        
+        // Helper function to get the correct answer text
+        function getCorrectAnswerText(questionIndex) {
+            const questionName = `q${questionIndex + 1}`;
+            const correctValue = correctAnswers[questionName];
+            const options = questionContainers[questionIndex].querySelectorAll('.options label');
+            
+            for (let option of options) {
+                const input = option.querySelector('input');
+                if (input.value === correctValue) {
+                    return option.textContent.trim();
+                }
+            }
+            
+            return '';
+        }
+    });
+    </script>
+</body>
+</html>

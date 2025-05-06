@@ -1,0 +1,340 @@
+:root {
+    --background-color: #ffffff;
+    --background-gradient-start: #ffffff;
+    --background-gradient-end: #e1e1e1;
+    --text-color: #222222;
+    --primary-color: #414955;
+    --hover-color: #3d3d3d;
+    --menu-bg: rgba(255, 255, 255, 0.9);
+    --type: #000000;
+    --articlebackground: #d1d1d1;
+    --contact: black;
+    --correct-color: #4CAF50;
+    --incorrect-color: #F44336;
+}
+
+.darkmode {
+    --background-color: #121212;
+    --background-gradient-start: #1c1c1c;
+    --background-gradient-end: #333333;
+    --text-color: #e0e0e0;
+    --primary-color: #ffffff;
+    --hover-color: #f1f1f1;
+    --menu-bg: rgba(18, 18, 18, 0.8);
+    --type: #ffffff;
+    --articlebackground: #000000;
+    --contact: white;
+    --correct-color: #388E3C;
+    --incorrect-color: #D32F2F;
+}
+
+/* Allgemeines Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--background-gradient-start), var(--background-gradient-end));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    color: var(--text-color);
+}
+
+/* Darkmode Switch */
+#theme-switch {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--hover-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+    z-index: 999;
+}
+
+#theme-switch:hover {
+    background-color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+#theme-switch svg {
+    width: 30px;
+    height: 30px;
+    fill: var(--background-color);
+}
+
+/* Darkmode - Umschalten der Icons */
+.darkmode #theme-switch svg:first-child {
+    display: none;
+}
+
+.darkmode #theme-switch svg:last-child {
+    display: block;
+}
+
+#theme-switch svg:first-child {
+    display: block;
+}
+
+#theme-switch svg:last-child {
+    display: none;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.2rem 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--menu-bg);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+/* Logo */
+.logo {
+    font-size: 2rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.logo:hover {
+    color: var(--hover-color);
+}
+
+/* Navigation */
+.navbar {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar a {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--hover-color);
+    transition: width 0.3s ease;
+}
+
+.navbar a:hover {
+    color: var(--hover-color);
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+/* Mobile Navigation */
+#check {
+    display: none;
+}
+
+.icons {
+    position: absolute;
+    right: 5%;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    cursor: pointer;
+    display: none;
+    transition: transform 0.3s ease; 
+}
+
+.icons:hover {
+    transform: scale(1.15); 
+}
+
+#check:checked + .icons #menu-icon {
+    display: none;
+}
+
+#check:checked + .icons #close-icon {
+    display: block;
+}
+
+.icons #close-icon {
+    display: none;
+}
+
+/* Responsives Design */
+@media (max-width: 1000px) {
+    .icons {
+        display: block;
+        position: absolute; 
+        right: 20px; 
+    }
+    #theme-switch {
+        right: 70px;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--menu-bg);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        align-items: center;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.3s ease-in-out;
+    }
+
+    #check:checked + .icons + .navbar {
+        height: 250px;
+    }
+}
+
+/* Quiz Styles */
+.quiz-container {
+    max-width: 800px;
+    margin: 100px auto 50px;
+    background: var(--articlebackground);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    width: 90%;
+}
+
+.quiz-container h1 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+}
+
+.question-container {
+    display: none;
+    margin-bottom: 20px;
+    padding: 20px;
+    background: var(--background-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.question-container.active {
+    display: block;
+}
+
+.question-container h3 {
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.options label {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    background: var(--articlebackground);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.options label:hover {
+    background: var(--hover-color);
+    color: var(--background-color);
+}
+
+.options input[type="radio"] {
+    margin-right: 10px;
+}
+
+.feedback {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+}
+
+.correct {
+    background-color: var(--correct-color);
+    color: white;
+    display: block;
+}
+
+.incorrect {
+    background-color: var(--incorrect-color);
+    color: white;
+    display: block;
+}
+
+.quiz-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--hover-color);
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.progress {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.results {
+    display: none;
+    text-align: center;
+    padding: 20px;
+    background: var(--background-color);
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.results h2 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.restart-btn {
+    margin: 20px auto 0;
+}
